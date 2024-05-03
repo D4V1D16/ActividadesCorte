@@ -1,0 +1,7 @@
+{
+  "name": "Corte2Activites",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
