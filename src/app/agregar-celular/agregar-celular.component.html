@@ -1,0 +1,29 @@
+<p>
+  <ion-label>Marca</ion-label>
+  <ion-input [(ngModel)]="marca" type="text"></ion-input>
+  
+  <ion-label>Modelo</ion-label>
+  <ion-input [(ngModel)]="modelo" type="text"></ion-input>
+  
+  <ion-label>Precio</ion-label>
+  <ion-input [(ngModel)]="precio" type="number"></ion-input>
+  
+  <ion-label>Almacenamiento Interno</ion-label>
+  <ion-input [(ngModel)]="almacenamientoInterno" type="number"></ion-input>
+  
+  <ion-label>Color</ion-label>
+  <ion-input [(ngModel)]="color" type="text"></ion-input>
+  
+  <ion-label>Imagen</ion-label>
+  <ion-input [(ngModel)]="imagen" type="text"></ion-input>
+  
+  <ion-label>RatingCount</ion-label>
+  <ion-input [(ngModel)]="ratingcount" type="text"></ion-input>
+  
+  <ion-label>RatingCount</ion-label>
+  <ion-input [(ngModel)]="ratingrate" type="text"></ion-input>
+
+  <ion-button (click)="guardarProducto()">Save</ion-button>
+
+  {{mensajePadre}}
+</p>
