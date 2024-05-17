@@ -10,7 +10,8 @@
       <ion-title size="large">Productos</ion-title>
     </ion-toolbar>
   </ion-header>
-  <app-agregar-celular (eventoCrearCelular)="agregarProducto($event)"></app-agregar-celular>
+
+  <div *ngIf="mostrarLista">
   <ion-card *ngFor="let cel of arrCells">
     <ion-card-header>
       <img alt="celular" src="{{cel.imagen}}" style="max-width: 100px; max-height: 200px;" />
@@ -37,4 +38,20 @@
       </ion-list>
     </ion-card-content>
   </ion-card>
+  <ion-button (click)="mostrarOcultarLista()">Ocultar Lista de Productos</ion-button>
+  </div>
+
+  <ion-button (click)="mostrarProducto()">Agregar Productos a la Lista</ion-button>
+  <ion-button (click)="mostrarOcultarLista()">Mostrar Lista de Productos</ion-button>
+  <ion-button (click)="home()">Volver al Inicio</ion-button>
+
+
+  <ion-button>Agregar Productos al Carrito</ion-button>
+
+
+
+  <div *ngIf="mostrarCelular">
+    <app-agregar-celular (eventoCrearCelular)="agregarProducto($event)"></app-agregar-celular>
+  </div>
+
 </ion-content>

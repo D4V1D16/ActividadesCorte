@@ -1,5 +1,5 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
-import { Celular } from '../folderInterfaces/producto.interface';
+import { Celular } from 'src/app/folderInterfaces/producto.interface';
 
 @Component({
   selector: 'app-agregar-celular',

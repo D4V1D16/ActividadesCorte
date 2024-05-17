@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { ProductosPageRoutingModule } from './productos-routing.module';
 import { ProductosPage } from './productos.page';
-import { AgregarCelularComponent } from '../agregar-celular/agregar-celular.component'; // Import AgregarCelularComponent
+import { AgregarCelularComponent } from '../components/agregar-celular/agregar-celular.component'; // Import AgregarCelularComponent
 
 @NgModule({
   imports: [

@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Celular } from '../folderInterfaces/producto.interface';
-import { AgregarCelularComponent } from '../agregar-celular/agregar-celular.component';
+import { AgregarCelularComponent } from '../components/agregar-celular/agregar-celular.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.page.html',
   styleUrls: ['./productos.page.scss'],
 })
 export class ProductosPage implements OnInit {
+  mostrarCelular : boolean = false;
+  mostrarLista : boolean = false;
   arrCells: Celular[] = [
     {
         marca: "Samsung",
@@ -20,6 +23,7 @@ export class ProductosPage implements OnInit {
             rate: 4
         }
     },
+
     {
         marca: "Apple",
         modelo: "iPhone 13",
@@ -43,7 +47,7 @@ export class ProductosPage implements OnInit {
           count: 8,
           rate: 2
       }
-    },
+    }/*,
     {
         marca: "OnePlus",
         modelo: "9 Pro",
@@ -67,9 +71,11 @@ export class ProductosPage implements OnInit {
           count: 450,
           rate: 3.9
       }
+      
     }
+    */
 ];
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
 
@@ -91,5 +97,17 @@ export class ProductosPage implements OnInit {
 
   agregarProducto(celular: Celular) {
     this.arrCells.push(celular);
+  }
+
+  mostrarProducto(){
+    this.mostrarCelular = true;
+  }
+
+  mostrarOcultarLista(){
+    this.mostrarLista = !this.mostrarLista;
+  }
+
+  home(){
+    this.router.navigate([''])
   }
 }
