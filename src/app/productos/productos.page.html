@@ -7,29 +7,27 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Productos</ion-title>
+      <ion-title size="large">Pagina de Productos</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-button (click)="mostrarProducto()">Agregar Productos a la Lista</ion-button>
+  <ion-button (click)="mostrarOcultarLista()">Mostrar Lista de Productos</ion-button>
+  <ion-button (click)="home()">Volver al Inicio</ion-button>
+
+
+  <ion-button (click)="mostrarOcultarCarrito()">Mostrar Productos del Carrito</ion-button>
 
   <div *ngIf="mostrarLista">
     <app-lista-productos></app-lista-productos>
     <ion-button (click)="mostrarOcultarLista()">Ocultar Lista de Productos</ion-button>
   </div>
 
-  <ion-button (click)="mostrarProducto()">Agregar Productos a la Lista</ion-button>
-  <ion-button (click)="mostrarOcultarLista()">Mostrar Lista de Productos</ion-button>
-  <!--
-  <ion-button (click)="carrito()">Volver al Inicio</ion-button>
-  -->
-  <ion-button (click)="home()">Volver al Inicio</ion-button>
-
-
-  <ion-button>Agregar Productos al Carrito</ion-button>
-
-
-
   <div *ngIf="mostrarCelular">
     <app-agregar-celular (eventoCrearCelular)="agregarProducto($event)"></app-agregar-celular>
+  </div>
+
+  <div *ngIf="mostrarCarrito">
+    <app-carrito-compras></app-carrito-compras>
   </div>
 
 </ion-content>

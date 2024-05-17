@@ -1,7 +1,7 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { Celular } from 'src/app/folderInterfaces/producto.interface';
 import { IonicModule } from '@ionic/angular';
+import { ListaproductosService } from 'src/app/Services/ListaProductos/listaproductos.service';
 
 @Component({
   selector: 'app-agregar-celular',
@@ -21,7 +21,7 @@ export class AgregarCelularComponent  implements OnInit {
   @Input() mensajePadre: string = '';
   @Output() eventoCrearCelular = new EventEmitter<Celular>();
 
-  constructor() { }
+  constructor(private listaCelulares:ListaproductosService) { }
 
   ngOnInit() {}
 

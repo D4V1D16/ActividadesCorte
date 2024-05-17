@@ -1,0 +1,16 @@
+<ion-list>
+  <ion-item *ngFor="let celular of listaCarrito">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{celular.marca}}</ion-card-title>
+        <ion-card-subtitle>{{celular.modelo}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Precio:{{celular.precio}}
+        <br>
+      <img alt="celular" src="{{celular.imagen}}" style="max-width: 150px; max-height: 150px;" />
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+</ion-list>

@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { ProductosPageRoutingModule } from './productos-routing.module';
 import { AgregarCelularComponent } from '../components/agregar-celular/agregar-celular.component';
 import { ListaProductosComponent } from '../components/lista-productos/lista-productos.component';
+import { CarritoComprasComponent } from '../components/carrito-compras/carrito-compras.component';
 import { ProductosPage } from './productos.page';
 
 
@@ -18,6 +19,6 @@ import { ProductosPage } from './productos.page';
     IonicModule,
     ProductosPageRoutingModule
   ],
-  declarations: [ProductosPage,AgregarCelularComponent,ListaProductosComponent] 
+  declarations: [ProductosPage,AgregarCelularComponent,ListaProductosComponent,CarritoComprasComponent] 
 })
 export class ProductosPageModule {}
