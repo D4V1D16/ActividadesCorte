@@ -1,5 +1,7 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Celular } from 'src/app/folderInterfaces/producto.interface';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-agregar-celular',

@@ -4,8 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { ProductosPageRoutingModule } from './productos-routing.module';
+import { AgregarCelularComponent } from '../components/agregar-celular/agregar-celular.component';
+import { ListaProductosComponent } from '../components/lista-productos/lista-productos.component';
 import { ProductosPage } from './productos.page';
-import { AgregarCelularComponent } from '../components/agregar-celular/agregar-celular.component'; // Import AgregarCelularComponent
+
+
+
 
 @NgModule({
   imports: [
@@ -14,6 +18,6 @@ import { AgregarCelularComponent } from '../components/agregar-celular/agregar-c
     IonicModule,
     ProductosPageRoutingModule
   ],
-  declarations: [ProductosPage, AgregarCelularComponent] // Declare AgregarCelularComponent
+  declarations: [ProductosPage,AgregarCelularComponent,ListaProductosComponent] 
 })
 export class ProductosPageModule {}
