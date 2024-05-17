@@ -31,11 +31,12 @@ export class CarritoService {
     return this.listaCarrito;
   }
 
-  obtenerTotal(){
+  obtenerTotal():number{
     let sum:number = 0;
     for(let celulares in this.listaCarrito){
       sum += this.listaCarrito[celulares].precio;
     }
+    return sum
   }
   
 }
